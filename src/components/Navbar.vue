@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'Home' }">Home</router-link>
     <router-link :to="{ name: 'Pokemon' }">Pokemon</router-link>
     <router-link :to="{ name: 'Function1' }">Function 1</router-link>
+    <router-link :to="{ name: 'Function2' }">Function 2</router-link>
     <!--
     <router-link :to="{ name: 'Home' }">Function 2</router-link>
     <router-link :to="{ name: 'Home' }">Function 3</router-link> -->

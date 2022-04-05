@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Pokemon from '../views/Pokemon.vue'
 import Function1 from '../views/Function1.vue'
+import Function2 from '../views/Function2.vue'
 
 Vue.use(VueRouter)
 
@@ -19,9 +20,11 @@ const routes = [
     path: '/Function1',
     name: 'Function1',
     component: Function1
-  },
-
-
+  }, {
+    path: '/Function2',
+    name: 'Function2',
+    component: Function2
+  }
 ]
 
 const router = new VueRouter({
