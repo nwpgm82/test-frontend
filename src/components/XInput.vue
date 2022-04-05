@@ -3,7 +3,7 @@
     <span>
         <slot /></span>
     <div>
-        <input v-if="type == 'text' || type == 'password'" :type="type" :id="id" :placeholder="placeholder" @input="setInputData($event)">
+        <input v-if="type != 'select'" :type="type" :id="id" :placeholder="placeholder" @input="setInputData($event)">
         <select v-if="type == 'select'" :id="id" :placeholder="placeholder" @change="setInputData($event)">
             <option v-for="(item, index) in options" :key="index" :value="item.value" :disabled="item.disabled" :selected="item.selected">{{ item.text }}</option>
         </select>

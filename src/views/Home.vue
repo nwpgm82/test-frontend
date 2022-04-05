@@ -49,7 +49,7 @@ export default {
                 header: 'E-mail',
                 id: 'email',
                 placeholder: 'Please fill e-mail',
-                type: 'text',
+                type: 'email',
                 value: ''
             }, {
                 header: 'Password',
