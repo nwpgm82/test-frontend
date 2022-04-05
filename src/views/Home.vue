@@ -1,33 +1,27 @@
 <template>
-<div>
-    <div class="top-banner">Test Frontend</div>
-    <navbar />
-    <form class="form-container" @submit="onSubmit">
-        <h1>Test form and validation</h1>
-        <x-input v-for="(item, index) in items" :key="index" :type="item.type" :id="item.id" :options="item.options" :placeholder="item.placeholder" @input="val => item.value = val">{{ item.header }}</x-input>
-        <div class="button-flex">
-            <div></div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
+<form class="form-container" @submit="onSubmit">
+    <h1>Test form and validation</h1>
+    <x-input v-for="(item, index) in items" :key="index" :type="item.type" :id="item.id" :options="item.options" :placeholder="item.placeholder" @input="val => item.value = val">{{ item.header }}</x-input>
+    <div class="button-flex">
+        <div></div>
+        <div>
+            <button type="submit">Submit</button>
         </div>
-        <div v-if="validatePassed" class="result-box">
-            <h2>Result:</h2>
-            <p>First Name: {{items[0]["value"]}}</p>
-            <p>Last Name: {{items[1]["value"]}}</p>
-            <p>E-mail: {{items[2]["value"]}}</p>
-            <p>Gender: {{items[5]["value"]}}</p>
-        </div>
-    </form>
-</div>
+    </div>
+    <div v-if="validatePassed" class="result-box">
+        <h2>Result:</h2>
+        <p>First Name: {{items[0]["value"]}}</p>
+        <p>Last Name: {{items[1]["value"]}}</p>
+        <p>E-mail: {{items[2]["value"]}}</p>
+        <p>Gender: {{items[5]["value"]}}</p>
+    </div>
+</form>
 </template>
 
 <script>
-import navbar from '@/components/Navbar.vue'
 import XInput from '@/components/XInput.vue'
 export default {
     components: {
-        navbar,
         XInput
     },
 
@@ -82,7 +76,6 @@ export default {
                 }],
                 value: ''
             }],
-
 
             inputError: 0,
             validatePassed: false
@@ -145,19 +138,6 @@ export default {
 </script>
 
 <style lang="scss">
-.top-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-    background-color: #718096;
-    border-radius: 8px;
-    font-size: 32px;
-    font-weight: bold;
-    color: #fff;
-}
-
 .form-container {
     width: 1000px;
     background-color: #cbd5e0;
