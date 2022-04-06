@@ -30,11 +30,13 @@ export default {
 
     methods: {
         get2ndMax(arr) {
-            console.log(arr.length);
+            // console.log(arr.length);
             let first = 0
             let second = 0
 
             if (!arr.length) return null
+
+            arr = [...new Set(arr)] // remove duplicate value
 
             if (arr.length === 1) return arr[0]
 
@@ -43,6 +45,7 @@ export default {
 
                 if (arr[i] > first) {
                     second = first
+
                     first = arr[i]
 
                 } else if (arr[i] > second) {
@@ -52,10 +55,6 @@ export default {
 
             return second
         }
-    },
-
-    created() {
-
     }
 }
 </script>
