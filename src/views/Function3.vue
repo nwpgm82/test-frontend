@@ -15,14 +15,14 @@ export default {
         return {
             arr1: [],
             arr2: [1],
-            arr3: [1,2,3],
-            arr4: [1,1],
-            arr5: [1,2,3,4,5,6],
-            arr6: [1,5,3,2,5,10],
-            arr7: [100,5,3,2,99],
-            arr8: [35,5,3,2,5,100],
+            arr3: [1, 2, 3],
+            arr4: [1, 1],
+            arr5: [1, 2, 3, 4, 5, 6],
+            arr6: [1, 5, 3, 2, 5, 10],
+            arr7: [100, 5, 3, 2, 99],
+            arr8: [35, 5, 3, 2, 5, 100],
             arr9: [1, 5, 101, 2, 5, 10],
-            arr10: [10,10,9],
+            arr10: [10, 10, 9],
             first: 0,
             second: 0,
         }
@@ -39,6 +39,8 @@ export default {
             if (arr.length === 1) return arr[0]
 
             for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === first) continue
+
                 if (arr[i] > first) {
                     second = first
                     first = arr[i]
@@ -64,7 +66,7 @@ export default {
     margin: auto;
     line-height: 30px;
 
-    > div {
+    >div {
         margin-bottom: 16px;
 
         .line {
