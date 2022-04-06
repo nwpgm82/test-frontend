@@ -30,7 +30,6 @@ export default {
 
     methods: {
         get2ndMax(arr) {
-            // console.log(arr.length);
             let first = 0
             let second = 0
 
@@ -45,7 +44,6 @@ export default {
 
                 if (arr[i] > first) {
                     second = first
-
                     first = arr[i]
 
                 } else if (arr[i] > second) {
